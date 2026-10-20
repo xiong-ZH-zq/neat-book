@@ -1,12 +1,13 @@
 # 发布 Neat Book 到 Typst Universe
 
-当前版本：0.1.0。当前状态：本地实现与验证，尚未向 Universe 或远程 Git 仓库提交。
+当前版本：0.1.0。源码仓库：[xiong-ZH-zq/neat-book](https://github.com/xiong-ZH-zq/neat-book)。
+Universe 的 `@preview` 导入在提交 PR 被合并并完成打包之后生效。
 
 ## 提交前的元数据
 
 1. 确认 `neat-book` 在 Universe 和待审 PR 中可用；如需改名，同时更改 manifest、全部版本化导入和脚本中的测试字符串。
-2. `typst.toml` 的 `authors = ["xzqbear"]` 与 LICENSE 当前使用工作区用户名。正式提交时确认署名，可补充 `<@github-handle>`。
-3. 创建真实仓库后，在 manifest 添加 `repository = "https://github.com/实际用户/实际仓库"`。当前有意省略，避免虚构地址。
+2. 署名为 `xzqbear <@xiong-ZH-zq>`，LICENSE 中保留 `xzqbear`。
+3. manifest 已配置真实源码仓库 `https://github.com/xiong-ZH-zq/neat-book`。
 4. 确认版权年份和 MIT 许可符合作者意愿。
 
 ## 验证与打包

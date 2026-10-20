@@ -2,9 +2,10 @@
 name = "neat-book"
 version = "0.1.0"
 entrypoint = "lib.typ"
-authors = ["xzqbear"]
+authors = ["xzqbear <@xiong-ZH-zq>"]
 license = "MIT"
 description = "Elegant multilingual books with framed theorems."
+repository = "https://github.com/xiong-ZH-zq/neat-book"
 keywords = ["book", "CJK", "elegantbook", "theorem", "algorithm"]
 categories = ["book"]
 compiler = "0.15.0"

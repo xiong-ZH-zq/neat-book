@@ -54,7 +54,8 @@ python3 scripts/check-web-fonts.py
 - `typst/packages` 当前未发现 `packages/preview/neat-book`，也未找到标题/正文含 `neat-book` 的开放 PR。
   这是本次 GitHub API 查询的结果，不构成包名预留。
 - 当前可用 GitHub 账户为 `xiong-ZH-zq`；查询时该账户下未发现 `neat-book` 仓库。
-- 尚未创建远程仓库、推送代码或提交 Universe PR。`repository` 元数据待确定真实仓库后填写。
+- 上述查询发生在首次发布之前。后续经用户明确授权，已创建公开源码仓库
+  <https://github.com/xiong-ZH-zq/neat-book>，并填写 `repository` 元数据。
 - 当前署名保留 `xzqbear`，MIT 许可保留不变；模板使用者可根据 MIT 许可使用和分发。
 
 ## 验证
@@ -80,7 +81,7 @@ typst-package-check check --json dist/packages/preview/neat-book/0.1.0
 
 ## 后续公开发布方案
 
-候选 GitHub 仓库：`xiong-ZH-zq/neat-book`，公开，沿用当前 MIT 许可与 `xzqbear` 署名。
-创建成功后补充真实 `repository` 字段，推送源码，再将准备好的
+用户已确认公开仓库 `xiong-ZH-zq/neat-book`，沿用当前 MIT 许可与 `xzqbear` 署名。
+发布流程为推送源码，再将准备好的
 `dist/packages/preview/neat-book/0.1.0/` 提交到 `typst/packages` 的 PR。
-当前用户要求先检查、再考虑发布，因此此轮保留在本地，未执行上述公开操作。
+Universe 受理状态以官方 PR 为准；只有合并并完成打包后，版本化导入才可供普通用户使用。

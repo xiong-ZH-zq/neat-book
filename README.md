@@ -3,6 +3,8 @@
 Elegant multilingual books with framed theorems, algorithms and annotated code.
 Inspired by the visual language of LaTeX ElegantBook; independently implemented in Typst.
 
+Source repository: [xiong-ZH-zq/neat-book](https://github.com/xiong-ZH-zq/neat-book).
+
 面向中文教材、数学讲义和技术书籍的 Typst 模板。默认使用开放字体，支持中、英、日、韩文，
 集成 Theorion 定理环境、按章编号、三级目录、Chicago author-date 参考文献和后置附录。
 
@@ -289,7 +291,7 @@ Codly 2 配置使用作用域内的 show 规则，自定义语言图标与名称
 GitHub Actions 的编译配置在 `.github/workflows/check.yml`。
 
 项目已提供 Universe manifest、可初始化模板、缩略图和最小发布包脚本。
-正式提交前仍需核实包名、作者信息和仓库 URL，并运行官方检查工具；详见 [发布说明](docs/RELEASING.md)。
+源码仓库和作者信息已配置，正式提交前仍应重新运行官方检查工具；详见 [发布说明](docs/RELEASING.md)。
 包格式和提交要求参见 [本次核对的 Typst 官方提交指南](https://github.com/typst/packages/tree/93b1568595dcf028559b5e68600c35f45c7e302e/docs)。
 
 ElegantBook 为设计参考，本项目并非其官方移植版。
