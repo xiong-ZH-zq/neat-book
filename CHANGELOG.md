@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- Fix missing CJK italics with explicit per-character oblique transforms, preserving bold weight and native Latin italics. Add `cjk-oblique` to adjust or disable synthesis.
+
 ## 0.1.0 — 2026-10-20
 
 - Initial book design with a minimal cover, running headers and three-level contents.

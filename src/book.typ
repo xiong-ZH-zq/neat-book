@@ -1,5 +1,5 @@
 #import "theme.typ": *
-#import "fonts.typ": default-fonts, book-fonts, font-list
+#import "fonts.typ": default-fonts, book-fonts, font-list, show-cjk-oblique
 #import "theorems.typ": setup-theorems, show-theorems, theorion
 #import "algorithms.typ": show-algorithms
 #import "code.typ": show-code
@@ -35,7 +35,7 @@
 #let neat-book(
   title: "Neat Book", subtitle: none, author: (), institution: none,
   date: none, logo: none,
-  lang: "zh", fonts: (:), font-size: 10.5pt,
+  lang: "zh", fonts: (:), font-size: 10.5pt, cjk-oblique: 12deg,
   accent: teal, paper: "a4", margin: (x: 26mm, top: 25mm, bottom: 24mm),
   cover: true, toc: true, toc-title: auto, toc-depth: 3,
   references: none, bibliography-style: "chicago-author-date",
@@ -92,6 +92,7 @@
   show: show-theorems
   show: show-algorithms.with(accent: accent)
   show: show-code.with(accent: accent)
+  show: show-cjk-oblique.with(angle: cjk-oblique)
   book-fonts.update(fonts)
   accent-color.update(accent)
   appendix-mode.update(false)

@@ -127,8 +127,10 @@ Ubuntu/Debian 可安装 `fonts-noto-cjk`；运行本仓库全部测试另需 `fo
 #ko[한국어와 *굵은 글꼴*。]
 ```
 
-多数 CJK 字体不提供原生 italic，Typst 使用合成倾斜；粗体取决于实际安装的字重。
-若需要真正设计过的 CJK 斜体，请自行选择相应字体。全书日文可设置 `lang: "ja"`，
+多数 CJK 字体不提供原生 italic，Typst 不会自动为这些字体合成斜体。
+本模板默认对斜体中的 CJK 字符逐字应用 12° 倾斜，保留粗体字重与逐字换行，西文使用原生 italic。
+用 `cjk-oblique: 15deg` 可调整倾斜角度；若选择了带原生斜体的 CJK 字体，设置 `cjk-oblique: none` 关闭合成。
+全书日文可设置 `lang: "ja"`，
 同时将 `fonts.sans` 改成 `"Noto Sans CJK JP"`；全书韩文同理。
 
 ## 定理、证明与解答
@@ -259,6 +261,7 @@ Codly 2 配置使用作用域内的 show 规则，自定义语言图标与名称
 | `lang` | `"zh"` | 文档语言，控制断行与环境名称 |
 | `fonts` | `(:)` | 合并覆盖上表的字体配置 |
 | `font-size` | `10.5pt` | 正文字号 |
+| `cjk-oblique` | `12deg` | CJK 合成斜体角度；`none` 关闭合成 |
 | `accent` | `rgb("176B70")` | 标题、链接、提要和定义框的主色 |
 | `paper` | `"a4"` | 纸张规格 |
 | `margin` | `(x: 26mm, top: 25mm, bottom: 24mm)` | 页边距 |
