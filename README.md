@@ -101,8 +101,11 @@ typst compile --root build/my-book --package-path build/packages build/my-book/m
 上述字体均为开放字体。Typst CLI 自带 Libertinus Serif、DejaVu Sans Mono 和 New Computer Modern Math；
 CJK 字体请从 [Noto CJK 官方项目](https://github.com/notofonts/noto-cjk) 安装或上传到网页项目。
 Ubuntu/Debian 可安装 `fonts-noto-cjk`；运行本仓库全部测试另需 `fonts-noto-core`。
+2026-10-20 已直接核对 Typst 官方网页字体索引：上述 7 个默认字体家族均在线可用，
+含所需常规、粗体，以及西文/等宽字体的斜体和粗斜体。默认配置在网页端无需另传字体。
+核对范围与可复查证据见 [发布检查记录](docs/PUBLISHING_AUDIT.md)。
 字体文件不随包分发。可用 `typst fonts` 检查实际字体名称，或 `typst compile --font-path ./fonts ...`
-指定字体目录。网页环境也应确认所选字体可用。
+指定字体目录。自定义字体仍应确认网页环境中可用。
 
 只覆盖需要更换的项，其余保留默认值。每项可使用字体名或字体名数组：
 
@@ -279,12 +282,14 @@ Codly 2 配置使用作用域内的 show 规则，自定义语言图标与名称
 ## 开发与发布
 
 本项目采用 MIT 许可；依赖保留各自许可证，通过 Universe 导入，不在仓库内复制源代码。
+素材来源、图标许可及商标说明见 [第三方声明](THIRD_PARTY_NOTICES.md)。封面书本图形是本项目原创，
+示例中 Python/Rust 标志仅用于标识代码语言，不表示项目得到相应组织的认可。
 `make test` 检查全部环境、公式重置、跨章引用、两章附录、五种 QED 结尾、
 中英日混排、长内容跨页，以及真实 `typst init` 后独立项目的编译。
 GitHub Actions 的编译配置在 `.github/workflows/check.yml`。
 
 项目已提供 Universe manifest、可初始化模板、缩略图和最小发布包脚本。
 正式提交前仍需核实包名、作者信息和仓库 URL，并运行官方检查工具；详见 [发布说明](docs/RELEASING.md)。
-包格式和提交要求以 [Typst 官方提交指南](https://github.com/typst/packages/tree/main/docs) 为准。
+包格式和提交要求参见 [本次核对的 Typst 官方提交指南](https://github.com/typst/packages/tree/93b1568595dcf028559b5e68600c35f45c7e302e/docs)。
 
 ElegantBook 为设计参考，本项目并非其官方移植版。

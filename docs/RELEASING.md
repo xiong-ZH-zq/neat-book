@@ -24,12 +24,15 @@ python3 scripts/package.py
 - `dist/packages/preview/neat-book/0.1.0/`：可复制到官方包仓库的目录。
 - `dist/neat-book-0.1.0.tar.gz`：不包含依赖源代码和构建产物的包归档。
 
-发布包显式包含 `lib.typ`、`src/`、`template/`、`typst.toml`、`README.md`、`LICENSE`、`thumbnail.png`。
+提交目录显式包含 `lib.typ`、`src/`、`template/`、`typst.toml`、`README.md`、`LICENSE`、
+`THIRD_PARTY_NOTICES.md`、`docs/`、`thumbnail.png`。其中 `docs/` 由 manifest 排除在编译器下载包之外，
+但仍提交到 Universe 仓库，以保证 README 的相对文档链接有效。
 模板主入口及所有章节均使用 `@preview/neat-book:0.1.0` 导入；初始化得到的项目可独立编译。
 字体通过系统或项目安装，不捆绑大型字体文件。
 
-官方检查器尚未安装在本工作区，本地 `make test` 不等于官方检查器通过。
-正式提交前根据 [官方安装方法](https://github.com/typst/package-check) 安装并运行：
+2026-10-20 已运行官方 `package-check` 0.7.0 实现的社区预编译版本，离线和完整网络检查均退出 0，
+没有警告或错误。工具来源、验证范围和字体检查结果见 [发布检查记录](PUBLISHING_AUDIT.md)。
+正式提交前仍应根据 [官方安装方法](https://github.com/typst/package-check) 安装并重新运行：
 
 ```sh
 cargo install --git https://github.com/typst/package-check.git
@@ -39,7 +42,8 @@ typst-package-check check
 
 若检查器需要本地包仓库，使用其官方文档中在 `typst/packages/packages` 下运行
 `typst-package-check check @preview/neat-book:0.1.0` 的方式。
-需要 CJK 字体的模板还应在 Typst 网页项目中验证字体可用性，必要时按 README 上传字体。
+默认字体已经逐项匹配 Typst 官方网页字体索引，且包含所需字重；默认配置无需上传字体。
+发布前可在实际网页项目中再预览一次；自定义字体需单独核对。
 
 ## 提交
 

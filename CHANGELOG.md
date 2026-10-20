@@ -3,6 +3,7 @@
 ## Unreleased
 
 - Fix missing CJK italics with explicit per-character oblique transforms, preserving bold weight and native Latin italics. Add `cjk-oblique` to adjust or disable synthesis.
+- Verify all default families against Typst's live web font inventory; add asset and license notices, a reproducible font check, and publishing audit. Include linked documentation in the Universe submission directory.
 
 ## 0.1.0 — 2026-10-20
 

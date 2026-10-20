@@ -20,7 +20,8 @@ def stage():
     destination = BUILD / "packages" / "preview" / package["name"] / package["version"]
     destination.mkdir(parents=True, exist_ok=True)
     # Explicit allowlist prevents local outputs or editor files entering a release.
-    for name in ("lib.typ", "src", "template", "typst.toml", "LICENSE", "README.md", "thumbnail.png"):
+    for name in ("lib.typ", "src", "template", "typst.toml", "LICENSE", "README.md",
+                 "THIRD_PARTY_NOTICES.md", "docs", "thumbnail.png"):
         source = ROOT / name
         if not source.exists():
             continue
